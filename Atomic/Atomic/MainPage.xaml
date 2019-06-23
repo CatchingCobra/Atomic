@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Atomic.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="infostyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="100"/>
+                <Setter Property="HeightRequest" Value="100"/>
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="40"/>
+            </Style>
+        </ResourceDictionary>
+        
+    </ContentPage.Resources>
+
+    <Grid Padding="5,0" RowSpacing="5" ColumnSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+          
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+           
+        </Grid.ColumnDefinitions>
+        
+        <Label x:Name="resultScreen" FontSize="60" FontAttributes="Bold" BackgroundColor="#3B3131" Text="0"
+                   TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                   LineBreakMode="NoWrap" Grid.ColumnSpan="3"/>
+
+        <Button Text="7" Grid.Row="4" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="8" Grid.Row="4" Grid.Column="1" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="9" Grid.Row="4" Grid.Column="2" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+
+        <Button Text="4" Grid.Row="3" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="5" Grid.Row="3" Grid.Column="1" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="6" Grid.Row="3" Grid.Column="2" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        
+        <Button Text="1" Grid.Row="2" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="2" Grid.Row="2" Grid.Column="1" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="3" Grid.Row="2" Grid.Column="2" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+
+        <Button Text="AC" Grid.Row="1" Grid.Column="0" Style="{StaticResource infostyle}" BackgroundColor="Red" Clicked="Clear"/>
+        <Button Text="0" Grid.Row="1" Grid.Column="1" Style="{StaticResource infostyle}" BackgroundColor="#3B3131" Clicked="SelectNumber"/>
+        <Button Text="=" Grid.Row="1" Grid.Column="2" Style="{StaticResource infostyle}" BackgroundColor="#4169e1" Clicked="Calculate"/>
+
+
+
+
+    </Grid>
+
+
+</ContentPage>
